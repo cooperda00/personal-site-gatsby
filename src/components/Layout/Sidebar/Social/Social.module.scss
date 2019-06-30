@@ -1,0 +1,14 @@
+@import "../../../../vars";
+
+.Social {
+  @include flex(column, null, center);
+
+  margin-bottom: 3rem;
+  margin-top: auto;
+
+  a {
+    @include font("XL");
+
+    margin-bottom: 3rem;
+  }
+}

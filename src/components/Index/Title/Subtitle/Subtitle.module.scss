@@ -1,0 +1,39 @@
+@import "../../../../vars";
+
+.Subtitle {
+  @include flex(column);
+  @include font("S");
+
+  letter-spacing: 0.4rem;
+  margin-top: 3rem;
+  position: relative;
+  width: 170px;
+
+  //Push to end of div
+  h2:nth-child(3),
+  h2:nth-child(4) {
+    align-self: flex-end;
+  }
+
+  //Oranger Spacer
+  h2:nth-child(1)::after,
+  h2:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 1.5em;
+    background: $primary;
+  }
+
+  h2:nth-child(1) {
+    &::after {
+      margin-left: 2rem;
+    }
+  }
+
+  h2:nth-child(3) {
+    &::before {
+      margin-left: -2rem;
+    }
+  }
+}

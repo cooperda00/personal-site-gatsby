@@ -1,0 +1,31 @@
+@import "../../../../vars";
+
+.MainTitle {
+  @include flex(column);
+  // margin-bottom: $spacingM;
+
+  h1 {
+    @include font("XL");
+  }
+
+  @include min-width(768px) {
+    width: 500px;
+    margin-left: -5rem;
+
+    h1 {
+      @include font("XXL");
+    }
+
+    h1:nth-child(2) {
+      align-self: flex-end;
+    }
+  }
+
+  @include min-width(1200px) {
+    width: 600px;
+
+    h1 {
+      @include font("G");
+    }
+  }
+}

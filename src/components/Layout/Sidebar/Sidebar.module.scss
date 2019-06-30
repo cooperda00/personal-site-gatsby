@@ -1,0 +1,15 @@
+@import "../../../vars";
+
+.Header {
+  @include flex(column, flex-start, center);
+
+  background: linear-gradient(
+    270deg,
+    rgba(238, 174, 201, 0.227328431372549) 0%,
+    #daa45ca2 100%
+  );
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100px;
+  width: 10vw;
+}

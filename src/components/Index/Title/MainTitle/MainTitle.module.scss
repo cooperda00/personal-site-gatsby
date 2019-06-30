@@ -5,7 +5,7 @@
   // margin-bottom: $spacingM;
 
   h1 {
-    @include font("XL");
+    @include font("L");
   }
 
   @include min-width(768px) {

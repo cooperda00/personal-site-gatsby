@@ -10,7 +10,7 @@
   grid-gap: 3rem;
   justify-items: center;
   max-width: 500px;
-  padding: 3rem;
+  padding: 1rem;
 
   @include min-width(1000px) {
     grid-template-areas:
@@ -26,6 +26,7 @@
     grid-template-columns: repeat(6, 1fr);
     max-width: 100%;
     height: calc(100% - 250px);
+    padding: 3rem;
   }
 }
 
@@ -35,6 +36,7 @@
   grid-area: copy;
   padding: 3rem;
   max-width: 600px;
+  text-align: justify;
 
   @include min-width(1000px) {
     @include font("M");
@@ -77,6 +79,6 @@
 }
 
 .Link {
-  color: dodgerblue;
+  color: darken($primary, 20%);
   font-weight: bold;
 }

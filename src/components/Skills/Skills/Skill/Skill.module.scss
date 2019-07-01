@@ -1,0 +1,16 @@
+@import "../../../../vars";
+
+.SkillCard {
+  @include flex(column, space-between, center);
+
+  border-radius: 50%;
+  border: 0.1px solid $charcoal;
+  height: 10rem;
+  padding: 1rem;
+  text-align: center;
+  width: 100px;
+}
+
+.ImageContainer {
+  height: 5rem;
+}

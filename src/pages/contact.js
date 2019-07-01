@@ -2,13 +2,12 @@
 import React from "react"
 //Components
 import Layout from "../components/Layout/Layout"
+import PageTitle from "../components/PageTitle/PageTitle"
 
 const ContactPage = () => {
   return (
     <Layout>
-      <div>
-        <h1>Greetings from Contact</h1>
-      </div>
+      <PageTitle title="Contact" />
     </Layout>
   )
 }

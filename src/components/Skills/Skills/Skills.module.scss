@@ -1,0 +1,36 @@
+@import "../../../vars";
+
+.Skills {
+  @include min-width(1000px) {
+    @include flex(row, center, center);
+
+    .GridContainer:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+}
+
+.GridContainer {
+  @include flex(column, flex-start, center);
+
+  h3 {
+    @include font("M");
+    @include min-width(768px) {
+      @include font("L");
+    }
+  }
+}
+
+.Grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  width: 100%;
+
+  @include min-width(870px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

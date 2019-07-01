@@ -32,11 +32,9 @@
 
 .Copy {
   @include font("S");
+  @include copy(justify);
 
   grid-area: copy;
-  padding: 3rem;
-  max-width: 600px;
-  text-align: justify;
 
   @include min-width(1000px) {
     @include font("M");

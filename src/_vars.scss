@@ -27,6 +27,9 @@ $lineM: 1.4;
 $lineS: 1.5;
 $lineXS: 1.5;
 
+//Spacing
+$spacingFromTop: 4rem;
+
 //MIXINS
 //Flex
 @mixin flex($dir: null, $just: null, $ali: null) {
@@ -91,11 +94,27 @@ $lineXS: 1.5;
   }
 }
 
-@mixin underline() {
-  background: $tertiary;
-  content: "";
-  display: block;
-  height: 2px;
-  margin-top: 4rem;
-  width: 100%;
+@mixin underline($width: 110%) {
+  @include flex(column, center, center);
+
+  &:after {
+    display: block;
+    background: $primary;
+    content: "";
+    height: 2px;
+    margin-top: 1rem;
+    width: $width;
+  }
+}
+
+@mixin copy($alignment) {
+  @include font("S");
+
+  padding: 3rem;
+  max-width: 700px;
+  text-align: $alignment;
+
+  @include min-width(1000px) {
+    @include font("M");
+  }
 }

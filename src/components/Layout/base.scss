@@ -61,7 +61,7 @@ a {
 
   background: $primary;
   border: 2px solid white;
-  color: white;
+  color: $charcoal;
   cursor: pointer;
   letter-spacing: 0.7rem;
   padding: 0.5rem 3rem;
@@ -73,7 +73,7 @@ a {
 
   &:hover {
     background: white;
-    color: $primary;
+    color: darken($primary, 15%);
   }
 }
 

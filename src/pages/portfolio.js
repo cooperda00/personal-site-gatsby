@@ -7,7 +7,7 @@ import PageTitle from "../components/PageTitle/PageTitle"
 const PortfolioPage = () => {
   return (
     <Layout>
-      <PageTitle title="Portfolio" />
+      <PageTitle title="Selected Portfolio" />
     </Layout>
   )
 }

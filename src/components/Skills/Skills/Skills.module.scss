@@ -1,11 +1,11 @@
 @import "../../../vars";
 
 .Skills {
-  @include min-width(1000px) {
-    @include flex(row, center, center);
+  @include min-width(1200px) {
+    @include flex(row, flex-start, flex-start);
 
     .GridContainer:not(:last-child) {
-      margin-right: 3rem;
+      margin-right: 8rem;
     }
   }
 }
@@ -13,8 +13,11 @@
 .GridContainer {
   @include flex(column, flex-start, center);
 
+  margin-top: 3rem;
+
   h3 {
     @include font("M");
+
     @include min-width(768px) {
       @include font("L");
     }
@@ -23,14 +26,18 @@
 
 .Grid {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 2.5rem;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   margin-bottom: 3rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
   width: 100%;
 
-  @include min-width(870px) {
+  @include min-width(600px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  // @include min-width(768px) {
+  //   grid-template-columns: 1fr 1fr 1fr 1fr;
+  // }
 }

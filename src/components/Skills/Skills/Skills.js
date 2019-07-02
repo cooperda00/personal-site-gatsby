@@ -5,27 +5,24 @@ import styles from "./Skills.module.scss"
 //Components
 import Skill from "./Skill/Skill"
 
-const Skills = () => {
+const Skills = ({ skills }) => {
   return (
     <section className={styles.Skills}>
       <div className={styles.GridContainer}>
         <h3>Front-End</h3>
         <div className={styles.Grid}>
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
+          {skills.frontend.map(skill => (
+            <Skill skill={skill} key={skill.name} />
+          ))}
         </div>
       </div>
 
       <div className={styles.GridContainer}>
         <h3>Back-End</h3>
         <div className={styles.Grid}>
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
+          {skills.backend.map(skill => (
+            <Skill skill={skill} key={skill.name} />
+          ))}
         </div>
       </div>
     </section>

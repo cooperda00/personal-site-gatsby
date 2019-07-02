@@ -1,16 +1,35 @@
 @import "../../../../vars";
 
 .SkillCard {
-  @include flex(column, space-between, center);
+  @include flex(column, center, center);
+
+  p {
+    @include font("S");
+
+    margin-top: 0.5rem;
+  }
+}
+
+.SkillBubble {
+  @include flex(column, center, center);
 
   border-radius: 50%;
   border: 0.1px solid $charcoal;
-  height: 10rem;
-  padding: 1rem;
+  height: 12rem;
+  padding: 1.2rem;
   text-align: center;
-  width: 100px;
+  width: 12rem;
 }
 
 .ImageContainer {
-  height: 5rem;
+  height: 70%;
+  width: 70%;
+}
+
+.ImageSvg {
+  height: 100%;
+}
+
+.Firebase {
+  margin-top: -1rem;
 }

@@ -1,0 +1,61 @@
+@import "../../../vars";
+
+.Card {
+  @include flex(column, space-between, center);
+
+  width: 100%;
+  height: 50rem;
+  max-width: 600px;
+  box-shadow: 2px 2px 2px gray;
+  background: $primaryLL;
+  margin: 3rem;
+}
+
+.MainImageContainer {
+  width: 100%;
+
+  .Image {
+  }
+}
+
+.Title {
+  @include font("M");
+
+  letter-spacing: 0.1rem;
+}
+
+.Technology {
+  @include flex(row, space-around, center);
+
+  width: 100%;
+  margin-top: 1rem;
+
+  .ImageContainer {
+    width: 10%;
+
+    img {
+      width: 90%;
+    }
+  }
+}
+
+.Controls {
+  @include flex(row, space-around, center);
+
+  width: 100%;
+  margin-bottom: 1rem;
+
+  a {
+    @include flex(row, center, center);
+    @include font("S");
+
+    svg {
+      @include font("L");
+      margin-right: 1rem;
+    }
+
+    p {
+      color: blue;
+    }
+  }
+}

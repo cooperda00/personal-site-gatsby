@@ -69,7 +69,7 @@ const SkillsPage = ({ data }) => {
   }
   return (
     <Layout>
-      <PageTitle title="My Core Skills" />
+      <PageTitle title="Core Skills" />
       <Copy />
       <Skills skills={skills} />
     </Layout>

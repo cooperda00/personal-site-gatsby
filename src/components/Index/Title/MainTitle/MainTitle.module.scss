@@ -2,10 +2,11 @@
 
 .MainTitle {
   @include flex(column);
-  // margin-bottom: $spacingM;
 
   h1 {
     @include font("L");
+    font-weight: 300;
+    letter-spacing: 0.4rem;
   }
 
   @include min-width(768px) {

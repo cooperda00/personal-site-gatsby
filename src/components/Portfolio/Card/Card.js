@@ -24,23 +24,41 @@ const Card = ({ item: { node } }) => {
   const getTechIcon = name => {
     switch (name) {
       case "html5":
-        return <Image fluid={data.html.childImageSharp.fluid} />
+        return (
+          <Image fluid={data.html.childImageSharp.fluid} alt="html5 logo" />
+        )
       case "css3":
-        return <img src={css} />
+        return <img src={css} alt="css3 logo" />
       case "sass":
-        return <Image fluid={data.sass.childImageSharp.fluid} />
+        return <Image fluid={data.sass.childImageSharp.fluid} alt="sass logo" />
       case "javascript":
-        return <Image fluid={data.js.childImageSharp.fluid} />
+        return (
+          <Image fluid={data.js.childImageSharp.fluid} alt="javascript logo" />
+        )
       case "react":
-        return <Image fluid={data.react.childImageSharp.fluid} />
+        return (
+          <Image fluid={data.react.childImageSharp.fluid} alt="react logo" />
+        )
       case "gatsby":
-        return <img src={gatsby} />
+        return <img src={gatsby} alt="gatsby logo" />
       case "redux":
-        return <Image fluid={data.redux.childImageSharp.fluid} />
+        return (
+          <Image fluid={data.redux.childImageSharp.fluid} alt="redux logo" />
+        )
       case "firebase":
-        return <Image fluid={data.firebase.childImageSharp.fluid} />
+        return (
+          <Image
+            fluid={data.firebase.childImageSharp.fluid}
+            alt="firebase logo"
+          />
+        )
       case "contentful":
-        return <Image fluid={data.contentful.childImageSharp.fluid} />
+        return (
+          <Image
+            fluid={data.contentful.childImageSharp.fluid}
+            alt="contentful logo"
+          />
+        )
       default:
         return null
     }
@@ -49,7 +67,11 @@ const Card = ({ item: { node } }) => {
   return (
     <div className={styles.Card}>
       <div className={styles.MainImageContainer}>
-        <Image fluid={fluid} className={styles.Image} />
+        <Image
+          fluid={fluid}
+          className={styles.Image}
+          alt={`${title} desktop screenshot`}
+        />
       </div>
 
       <h2 className={styles.Title}>{title}</h2>

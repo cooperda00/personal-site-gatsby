@@ -10,5 +10,10 @@
     @include font("XL");
 
     margin-bottom: 3rem;
+    transition: 1s;
+  }
+
+  a:hover {
+    transform: rotate(45deg);
   }
 }

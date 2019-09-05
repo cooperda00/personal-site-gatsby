@@ -12,6 +12,8 @@
 .Typography {
   h1 {
     @include font("S");
+    letter-spacing: 1rem;
+    margin-left: 1rem;
   }
 }
 

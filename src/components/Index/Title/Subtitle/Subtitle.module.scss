@@ -10,6 +10,7 @@
 
   h2 {
     @include font("S");
+    font-weight: 300;
   }
 
   //Push to end of div

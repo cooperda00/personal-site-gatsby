@@ -9,10 +9,11 @@
   h1 {
     @include font("L");
     @include underline(100%);
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.4rem;
+    font-weight: 300;
 
     @include min-width(768px) {
-      @include font("XL");
+      @include font("XXL");
     }
   }
 }

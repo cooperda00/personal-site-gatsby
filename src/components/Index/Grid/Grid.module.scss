@@ -57,6 +57,8 @@
     border-bottom: 1px solid white;
     padding-bottom: 3rem;
     color: white;
+    letter-spacing: 0.4rem;
+    font-weight: 300;
   }
 
   @include min-width(1000px) {
@@ -77,6 +79,6 @@
 }
 
 .Link {
-  color: darken($primary, 20%);
+  color: dodgerblue;
   font-weight: bold;
 }

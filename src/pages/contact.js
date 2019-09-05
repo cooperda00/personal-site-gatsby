@@ -8,7 +8,7 @@ import Contact from "../components/Contact/Contact"
 const ContactPage = () => {
   return (
     <Layout>
-      <PageTitle title="Contact Me" />
+      <PageTitle title="Get In Touch" />
       <Contact />
     </Layout>
   )

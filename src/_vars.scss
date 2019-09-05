@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=PT+Serif:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700&display=swap");
 
 //COLORS
 $primary: lighten(#daa45c, 15%);
@@ -6,12 +6,12 @@ $primaryL: lighten(#daa45c, 20%);
 $primaryLL: lighten(#daa45c, 30%);
 $secondary: #b7ddba;
 $tertiary: #edf9a9;
-$lightgray: lighten(#dfdce3, 10%);
+$lightgray: #dfdce3;
 $darkgray: #36454f;
 $charcoal: #1f1e1f;
 
 //FONT
-$fontStack: "PT Serif", serif;
+$fontStack: "Open Sans", sans-serif;
 $fontG: 6.5rem;
 $fontXXL: 5rem;
 $fontXL: 4rem;
@@ -31,6 +31,14 @@ $lineXS: 1.5;
 
 //Spacing
 $spacingFromTop: 4rem;
+
+//SPACING
+$spaceXS: 0.5rem;
+$spaceS: 1rem;
+$spaceSM: 2rem;
+$spaceM: 3rem;
+$spaceL: 6rem;
+$spaceXL: 10rem;
 
 //MIXINS
 //Flex
@@ -113,7 +121,7 @@ $spacingFromTop: 4rem;
   @include font("S");
 
   padding: 3rem;
-  max-width: 700px;
+  max-width: 1000px;
   text-align: $alignment;
 
   @include min-width(1000px) {

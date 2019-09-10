@@ -5,12 +5,14 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import PageTitle from "../components/PageTitle/PageTitle"
 import Featured from "../components/Portfolio/Featured/Featured"
+import SEO from "../components/SEO/SEO"
 
 const PortfolioPage = ({ data }) => {
   const featuredPortfolio = data.featured
 
   return (
     <Layout>
+      <SEO titleExtra="Portfolio" descriptionExtra="Portfolio"/>
       <PageTitle title="Selected Portfolio" />
       <Featured featuredPortfolio={featuredPortfolio} />
     </Layout>

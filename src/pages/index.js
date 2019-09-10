@@ -3,9 +3,11 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import Title from "../components/Index/Title/Title"
 import Grid from "../components/Index/Grid/Grid"
+import SEO from "../components/SEO/SEO"
 
 const IndexPage = () => (
   <Layout>
+    <SEO titleExtra="Home" descriptionExtra="Home"/>
     <Title />
     <Grid />
   </Layout>

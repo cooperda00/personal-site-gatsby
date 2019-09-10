@@ -6,9 +6,11 @@ import Layout from "../components/Layout/Layout"
 import PageTitle from "../components/PageTitle/PageTitle"
 import Copy from "../components/Skills/Copy/Copy"
 import Skills from "../components/Skills/Skills/Skills"
+import SEO from "../components/SEO/SEO"
 //SVGs
 import css from "../images/skills/css.svg"
 import gatsby from "../images/skills/gatsby.svg"
+
 
 const SkillsPage = ({ data }) => {
   const skills = {
@@ -69,6 +71,7 @@ const SkillsPage = ({ data }) => {
   }
   return (
     <Layout>
+      <SEO titleExtra="Skills" descriptionExtra="Skills"/>
       <PageTitle title="Core Skills" />
       <Copy />
       <Skills skills={skills} />

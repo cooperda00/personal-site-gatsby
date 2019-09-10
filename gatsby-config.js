@@ -1,12 +1,13 @@
 const path = require(`path`)
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
   siteMetadata: {
-    title: `The Allotment: Vegan Dining`,
-    description: `Enjoy hearty, filling vegan takes on British classics in our cozy restaurant. All produce locally sourced!`,
+    title: `Daniel Cooper, Web Developer`,
+    description: `Front-end web developer working with React and Gatsby JS.`,
     author: `cooperda`,
   },
   plugins: [
@@ -28,5 +29,6 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    `gatsby-plugin-netlify`
   ],
 }

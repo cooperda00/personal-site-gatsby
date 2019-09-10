@@ -32,7 +32,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
 
       <meta
         name="twitter:title"
-        content={`${titleExtra} | Mind Body Spirit Fair BKK`}
+        content={`${titleExtra} | Daniel Cooper, Web Developer`}
       />
 
       <meta
@@ -41,7 +41,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
       />
 
       <meta name="twitter:image" 
-      content={image} 
+      content="https://i.imgur.com/D0SErfi.png"
       />
 
       <meta name="twitter:creator" content="danielcooper.io" />
@@ -72,7 +72,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
       />
       <meta
         property="og:image"
-        content={image}
+        content="https://i.imgur.com/urcqcY4.png"
         prefix="og: http://ogp.me/ns#"
       />
       <meta
@@ -102,3 +102,4 @@ const query = graphql`
 `
 
 export default SEO
+

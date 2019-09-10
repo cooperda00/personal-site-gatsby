@@ -51,14 +51,14 @@ const Contact = () => {
         <div className={styles.InputGroup}>
           <label htmlFor="message">Message: </label>
           <textarea
-            placeholder="Dear Sir/Madame... "
+            placeholder="Dear Daniel ... "
             name="message"
             id="message"
             onFocus={e => {
               e.target.placeholder = ""
             }}
             onBlur={e => {
-              e.target.placeholder = "Dear Sir/Madame... "
+              e.target.placeholder = "Dear Daniel ... "
             }}
             required
           ></textarea>

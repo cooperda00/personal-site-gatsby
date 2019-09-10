@@ -1,9 +1,6 @@
 //Modules
 import React from "react"
 import { graphql } from "gatsby"
-
-// import * as Markdown from "react-markdown"
-
 //Components
 import Layout from "../components/Layout/Layout"
 import PageTitle from "../components/PageTitle/PageTitle"
@@ -22,7 +19,8 @@ const PortfolioPage = ({ data }) => {
 
 export const query = graphql`
   {
-    featured: allContentfulPortfolioItem(filter: { featured: { eq: true } }) {
+    featured: allContentfulPortfolioItem(filter: {featured: {eq: true}}, 
+      sort: {fields: [priority] order: ASC}) {
       edges {
         node {
           liveUrl

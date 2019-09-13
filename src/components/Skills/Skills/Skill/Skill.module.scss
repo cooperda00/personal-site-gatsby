@@ -17,10 +17,15 @@
 
   border-radius: 50%;
   border: 0.1px solid $lightgray;
-  height: 12rem;
+  height: 10rem;
   padding: 1.2rem;
   text-align: center;
-  width: 12rem;
+  width: 10rem;
+
+  @include min-width(768px) {
+    height: 12rem;
+    width: 12rem;
+  }
 }
 
 .ImageContainer {

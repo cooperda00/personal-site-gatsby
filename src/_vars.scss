@@ -120,7 +120,7 @@ $spaceXL: 10rem;
 @mixin copy($alignment) {
   @include font("S");
 
-  padding: 3rem;
+  padding: 2rem;
   max-width: 1000px;
   text-align: $alignment;
 

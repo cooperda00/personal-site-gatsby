@@ -2,6 +2,7 @@
 
 .MainTitle {
   @include flex(column);
+  margin-left: $spaceM;
 
   h1 {
     @include font("L");

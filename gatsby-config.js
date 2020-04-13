@@ -19,7 +19,7 @@ module.exports = {
     "gatsby-plugin-robots-txt",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {

@@ -1,18 +1,37 @@
 //Modules
 import React from "react"
-//Sass
-import styles from "./Layout.module.scss"
-import "./base.scss"
 //Components
 import Sidebar from "./Sidebar/Sidebar"
+//Styles
+import "./base.css"
+import styled from "styled-components"
+import { flex, spacing } from "../../Utilities"
 
 const Layout = ({ children }) => {
   return (
-    <div className={styles.Layout}>
+    <StyledLayout>
       <Sidebar />
       <main>{children}</main>
-    </div>
+    </StyledLayout>
   )
 }
+
+const StyledLayout = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  height: 100vh;
+
+  main {
+    ${flex("column", "flex-start", "center")};
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: ${spacing.M} ${spacing.S};
+
+    @media (min-width: 768px) {
+      padding: ${spacing.M};
+    }
+  }
+`
 
 export default Layout

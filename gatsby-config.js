@@ -10,7 +10,7 @@ module.exports = {
     description: `Front-end web developer working with React and Gatsby JS.`,
     author: `danielcooper.io`,
     siteUrl: "https://danielcooper.io",
-    image: "/og_image.png"
+    image: "/og_image.png",
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -19,7 +19,7 @@ module.exports = {
     "gatsby-plugin-robots-txt",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    { 
+    {
       resolve: "gatsby-plugin-html-attributes",
       options: {
         lang: "en",
@@ -51,6 +51,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-netlify`
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
+    `gatsby-plugin-netlify`,
   ],
 }

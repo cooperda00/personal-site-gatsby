@@ -1,18 +1,29 @@
 //Modules
 import React from "react"
-//Sass
-import styles from "./Title.module.scss"
+//Styles
+import styled from "styled-components"
+import { flex } from "../../../Utilities"
 //Components
-import MainTitle from "./MainTitle/MainTitle"
-import Subtitle from "./Subtitle/Subtitle"
+import MainTitle from "./MainTitle"
+import Subtitle from "./Subtitle"
 
 const Title = () => {
   return (
-    <div className={styles.Title}>
+    <StyledTitleContainer>
       <MainTitle />
       <Subtitle />
-    </div>
+    </StyledTitleContainer>
   )
 }
+
+const StyledTitleContainer = styled.div`
+  ${flex("column", "center", "center")};
+
+  @media (min-width: 900px) {
+    ${flex("row", "space-between", "flex-start")};
+    max-width: 1000px;
+    width: 70vw;
+  }
+`
 
 export default Title

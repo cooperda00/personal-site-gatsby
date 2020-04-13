@@ -1,9 +1,0 @@
-@import "../../../vars";
-
-.Featured {
-  @include flex(row, center, center);
-
-  width: 100%;
-  padding: 1rem;
-  flex-wrap: wrap;
-}

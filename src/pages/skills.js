@@ -3,14 +3,14 @@ import React from "react"
 import { graphql } from "gatsby"
 //Components
 import Layout from "../components/Layout/Layout"
-import PageTitle from "../components/PageTitle/PageTitle"
 import Copy from "../components/Skills/Copy/Copy"
 import Skills from "../components/Skills/Skills/Skills"
 import SEO from "../components/SEO/SEO"
 //SVGs
 import css from "../images/skills/css.svg"
 import gatsby from "../images/skills/gatsby.svg"
-
+//Styles
+import { StyledMainHeading } from "../Elements"
 
 const SkillsPage = ({ data }) => {
   const skills = {
@@ -28,6 +28,11 @@ const SkillsPage = ({ data }) => {
       {
         name: "Sass",
         image: data.sass.childImageSharp.fluid,
+        type: "png",
+      },
+      {
+        name: "Styled Components",
+        image: data.styledComponents.childImageSharp.fluid,
         type: "png",
       },
       {
@@ -71,8 +76,8 @@ const SkillsPage = ({ data }) => {
   }
   return (
     <Layout>
-      <SEO titleExtra="Skills" descriptionExtra="Skills"/>
-      <PageTitle title="Core Skills" />
+      <SEO titleExtra="Skills" descriptionExtra="Skills" />
+      <StyledMainHeading center>Skills</StyledMainHeading>
       <Copy />
       <Skills skills={skills} />
     </Layout>
@@ -124,6 +129,15 @@ export const query = graphql`
       }
     }
     redux: file(relativePath: { eq: "skills/redux.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    styledComponents: file(
+      relativePath: { eq: "skills/styled_components_icon.png" }
+    ) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

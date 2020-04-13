@@ -3,50 +3,58 @@ import React from "react"
 import { graphql } from "gatsby"
 //Components
 import Layout from "../components/Layout/Layout"
-import PageTitle from "../components/PageTitle/PageTitle"
-import Featured from "../components/Portfolio/Featured/Featured"
+import Portfolio from "../components/Portfolio/Portfolio"
 import SEO from "../components/SEO/SEO"
+//Styles
+import { StyledMainHeading } from "../Elements"
 
 const PortfolioPage = ({ data }) => {
-  const featuredPortfolio = data.featured
+  const professionalProjects = data.professional
+  const personalProjects = data.personal
 
   return (
     <Layout>
-      <SEO titleExtra="Portfolio" descriptionExtra="Portfolio"/>
-      <PageTitle title="Selected Portfolio" />
-      <Featured featuredPortfolio={featuredPortfolio} />
+      <SEO titleExtra="Portfolio" descriptionExtra="Portfolio" />
+      <StyledMainHeading center>Portfolio</StyledMainHeading>
+      <Portfolio
+        professionalProjects={professionalProjects}
+        personalProjects={personalProjects}
+      />
     </Layout>
   )
 }
 
 export const query = graphql`
   {
-    featured: allContentfulPortfolioItem(filter: {featured: {eq: true}}, 
-      sort: {fields: [priority] order: ASC}) {
+    professional: allContentfulPortfolioItem(
+      filter: { type: { eq: "professional" } }
+      sort: { order: DESC, fields: projectStartDate }
+    ) {
       edges {
         node {
-          liveUrl
-          codeUrl
+          path
           title
-          technology
-          priority
           desktopImage {
             fluid(maxWidth: 1200) {
               ...GatsbyContentfulFluid_tracedSVG
             }
           }
-          tabletImage {
+        }
+      }
+    }
+
+    personal: allContentfulPortfolioItem(
+      filter: { type: { eq: "personal" } }
+      sort: { order: ASC, fields: projectStartDate }
+    ) {
+      edges {
+        node {
+          path
+          title
+          desktopImage {
             fluid(maxWidth: 1200) {
               ...GatsbyContentfulFluid_tracedSVG
             }
-          }
-          mobileImage {
-            fluid(maxWidth: 1200) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          description {
-            description
           }
         }
       }

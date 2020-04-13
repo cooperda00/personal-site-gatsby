@@ -1,9 +1,5 @@
 export const links = [
   {
-    path: "/",
-    text: "Home",
-  },
-  {
     path: "/skills",
     text: "Skills",
   },

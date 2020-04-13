@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700&display=swap");
+
+//COLORS
+$primary: lighten(#daa45c, 15%);
+$primaryL: lighten(#daa45c, 20%);
+$primaryLL: lighten(#daa45c, 30%);
+$secondary: #b7ddba;
+$tertiary: #edf9a9;
+$lightgray: #dfdce3;
+$darkgray: #36454f;
+$charcoal: #1f1e1f;
+
+//FONT
+$fontStack: "Open Sans", sans-serif;
+$fontG: 6.5rem;
+$fontXXL: 5rem;
+$fontXL: 4rem;
+$fontL: 3rem;
+$fontM: 2.5rem;
+$fontS: 1.8rem;
+$fontXS: 1.4rem;
+
+//Line Height
+$lineG: 1;
+$lineXXL: 1;
+$lineXL: 1.1;
+$lineL: 1.2;
+$lineM: 1.4;
+$lineS: 1.5;
+$lineXS: 1.5;
+
+//Spacing
+$spacingFromTop: 4rem;
+
+//SPACING
+$spaceXS: 0.5rem;
+$spaceS: 1rem;
+$spaceSM: 2rem;
+$spaceM: 3rem;
+$spaceL: 6rem;
+$spaceXL: 10rem;
+
+//MIXINS
+//Flex
+@mixin flex($dir: null, $just: null, $ali: null) {
+  display: flex;
+  @if $dir != null {
+    flex-direction: $dir;
+  }
+  @if $just != null {
+    justify-content: $just;
+  }
+  @if $ali != null {
+    align-items: $ali;
+  }
+}
+
+//Media Queries
+@mixin min-width($threshold) {
+  @media screen and (min-width: $threshold) {
+    @content;
+  }
+}
+
+//CTA Button
+@mixin cta-button() {
+  background: $tertiary;
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0px 2px 0px 0px darken($tertiary, 10%);
+  color: #1f1f1f;
+  cursor: pointer;
+  font-size: $fontM;
+  padding: 0.6rem 1.1rem;
+
+  &:hover {
+    background: darken($tertiary, 10%);
+  }
+}
+
+//Font size and height
+@mixin font($size) {
+  @if $size == "XS" {
+    font-size: $fontXS;
+    line-height: $lineXS;
+  } @else if $size == "S" {
+    font-size: $fontS;
+    line-height: $lineS;
+  } @else if $size == "M" {
+    font-size: $fontM;
+    line-height: $lineM;
+  } @else if $size == "L" {
+    font-size: $fontL;
+    line-height: $lineL;
+  } @else if $size == "XL" {
+    font-size: $fontXL;
+    line-height: $lineXL;
+  } @else if $size == "XXL" {
+    font-size: $fontXXL;
+    line-height: $lineXXL;
+  } @else if $size == "G" {
+    font-size: $fontG;
+    line-height: $lineG;
+  }
+}
+
+@mixin underline($width: 110%) {
+  @include flex(column, center, center);
+
+  &:after {
+    display: block;
+    background: $primary;
+    content: "";
+    height: 2px;
+    margin-top: 1rem;
+    width: $width;
+  }
+}
+
+@mixin copy($alignment) {
+  @include font("S");
+
+  padding: 3rem;
+  max-width: 1000px;
+  text-align: $alignment;
+
+  @include min-width(1000px) {
+    @include font("M");
+  }
+}

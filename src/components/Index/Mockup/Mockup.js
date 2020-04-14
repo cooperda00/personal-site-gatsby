@@ -8,10 +8,10 @@ import Slideshow from "./Slideshow"
 //Animations
 import { motion } from "framer-motion"
 //Images
-import mockup from "../../../images/desktop_mockup.png"
-import omroom from "../../../images/omroom_desktop-min.png"
-import mbs from "../../../images/mbsbkk_desktop-min.png"
-import rp from "../../../images/rp_desktop-min.png"
+import mockup from "../../../images/desktop_mockup-min.webp"
+import omroom from "../../../images/omroom_desktop-min.webp"
+import mbs from "../../../images/mbsbkk_desktop-min.webp"
+import rp from "../../../images/rp_desktop-min.webp"
 
 const Mockup = () => {
   const [images, setImages] = useState([omroom, mbs, rp])

@@ -25,16 +25,7 @@ const SkillsPage = ({ data }) => {
         image: css,
         type: "svg",
       },
-      {
-        name: "Sass",
-        image: data.sass.childImageSharp.fluid,
-        type: "png",
-      },
-      {
-        name: "Styled Components",
-        image: data.styledComponents.childImageSharp.fluid,
-        type: "png",
-      },
+
       {
         name: "JavaScript",
         image: data.js.childImageSharp.fluid,
@@ -53,6 +44,16 @@ const SkillsPage = ({ data }) => {
       {
         name: "Redux",
         image: data.redux.childImageSharp.fluid,
+        type: "png",
+      },
+      {
+        name: "Sass",
+        image: data.sass.childImageSharp.fluid,
+        type: "png",
+      },
+      {
+        name: "Styled Components",
+        image: data.styledComponents.childImageSharp.fluid,
         type: "png",
       },
     ],

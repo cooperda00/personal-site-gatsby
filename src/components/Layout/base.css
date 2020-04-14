@@ -64,3 +64,9 @@ button {
 button:active {
   transform: scale(0.99);
 }
+
+/* Gatsby Link Styles */
+
+.active-link {
+  text-shadow: 0 0 1px hsl(24, 24%, 11%);
+}

@@ -3,7 +3,7 @@ import React from "react"
 import { Link } from "gatsby"
 //Styles
 import styled from "styled-components"
-import { flex, font } from "../../../Utilities"
+import { flex, font, grays } from "../../../Utilities"
 //Constants
 import { links } from "../../../constants/links"
 //Icons
@@ -33,6 +33,11 @@ const StyledNavigation = styled.nav`
   a {
     ${font("XS")};
     margin-bottom: 2rem;
+    transition: 0.4s;
+
+    &:hover {
+      text-shadow: 0 0 1px ${grays[5]};
+    }
 
     @media (min-width: 360px) {
       ${font("S")};

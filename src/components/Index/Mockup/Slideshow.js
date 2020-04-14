@@ -23,8 +23,7 @@ const Slideshow = ({ image }) => (
       animate="center"
       exit="exit"
       transition={{
-        x: { type: "spring", stiffness: 300, damping: 200 },
-        duration: 0.5,
+        duration: 1,
       }}
     >
       <img src={image} alt="Website screenshot" />
@@ -46,7 +45,7 @@ const StyledSlideshow = styled(motion.div)`
 
   @media (min-width: 1100px) {
     height: 61.3%;
-    top: 6.65%;
+    top: 6.6%;
   }
 
   img {

@@ -33,7 +33,7 @@ const Card = ({ item: { node } }) => {
 
   return (
     <motion.div variants={skillVariants} transition={skillTransition}>
-      <Link to={`/portfolio${path}`}>
+      <Link to={`/portfolio${path}`} aria-label={`Learn more about ${title}`}>
         <StyledCard>
           <div className="image-container">
             <Image fluid={fluid} className="image" alt={title} />

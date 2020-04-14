@@ -64,12 +64,3 @@ button {
 button:active {
   transform: scale(0.99);
 }
-
-/* Links */
-/* // .active-link {
-//   color: #258fb8 !important;
-// }
-
-// .active-link-footer {
-//   color: #e6834f !important;
-// } */

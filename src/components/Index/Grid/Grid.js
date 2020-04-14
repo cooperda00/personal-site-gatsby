@@ -54,7 +54,7 @@ const StyledGrid = styled.section`
     }
 
     .link {
-      color: dodgerblue;
+      color: #6a5eff;
     }
   }
 `

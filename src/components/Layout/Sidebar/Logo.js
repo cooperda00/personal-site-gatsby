@@ -15,8 +15,8 @@ const Logo = () => {
       whileHover={{ scale: [1, 1.1, 1.2, 1.1, 1] }}
       transition={{ duration: 0.5, type: "spring", stiffness: 10 }}
     >
-      <StyledLogo to="/">
-        <LogoSVG alt="danielcooper.io logo" />
+      <StyledLogo to="/" aria-label="return to home page">
+        <LogoSVG />
       </StyledLogo>
     </motion.div>
   )

@@ -13,8 +13,9 @@ const Social = () => {
         href="https://github.com/cooperda00"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Visit my github"
       >
-        <IoLogoGithub />
+        <IoLogoGithub role="img" />
       </a>
     </StyledSocial>
   )

@@ -75,7 +75,7 @@ const StyledDetails = styled.section`
 
       a {
         ${flex("row", "flex-start", "center")};
-        color: dodgerblue;
+        color: #6a5eff;
       }
 
       svg {

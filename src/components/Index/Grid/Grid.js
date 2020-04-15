@@ -16,7 +16,7 @@ const Grid = () => {
         England. I create web sites and web apps with a focus on mobile-first
         responsive design, accessibility, and a clean user experience. I can
         create product landing pages, blogs, portfolio sites, e-commerce
-        solutions, appliction UIs and anything in-between. Feel free to
+        solutions, application UIs and anything in-between. Feel free to
         <Link to="/contact" className="link">
           {" "}
           contact

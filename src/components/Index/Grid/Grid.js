@@ -12,7 +12,7 @@ const Grid = () => {
     <StyledGrid>
       <Mockup />
       <p className="copy">
-        I am front-end focused web developer currently based in Norwich,
+        I am a front-end focused web developer currently based in Norwich,
         England. I create web sites and web apps with a focus on mobile-first
         responsive design, accessibility, and a clean user experience. I can
         create product landing pages, blogs, portfolio sites, e-commerce

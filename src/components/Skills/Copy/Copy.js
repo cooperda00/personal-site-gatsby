@@ -20,7 +20,7 @@ const Copy = () => {
         For most of my client work, I use <strong>Gatsby</strong> with a
         headless CMS like <strong>Contentful</strong> providing the data layer.
         This allows me to code in a modern and modular way, whilst providing the
-        same services and SEO capabilites that a Wordpress site might. Hosting
+        same services and SEO capabilities that a Wordpress site might. Hosting
         statically on <strong>Netlify</strong> provides all the power of a CDN
         with many other useful features.
       </p>

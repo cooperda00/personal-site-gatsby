@@ -9,14 +9,12 @@ import { StyledMainHeading } from "../Elements"
 
 const IndividualPortfolioItem = ({
   data: { contentfulPortfolioItem: piece },
-}) => {
-  return (
-    <Layout>
-      <StyledMainHeading>{piece.title}</StyledMainHeading>
-      <IndividualPiece piece={piece} />
-    </Layout>
-  )
-}
+}) => (
+  <Layout>
+    <StyledMainHeading>{piece.title}</StyledMainHeading>
+    <IndividualPiece piece={piece} />
+  </Layout>
+)
 
 export const query = graphql`
   query($title: String!) {
@@ -27,17 +25,12 @@ export const query = graphql`
       codeUrl
       technology
       desktopImage {
-        fluid(maxWidth: 1200) {
-          ...GatsbyContentfulFluid_tracedSVG
-        }
-      }
-      tabletImage {
-        fluid(maxWidth: 1200) {
+        fluid(maxWidth: 900) {
           ...GatsbyContentfulFluid_tracedSVG
         }
       }
       mobileImage {
-        fluid(maxWidth: 1200) {
+        fluid(maxWidth: 500) {
           ...GatsbyContentfulFluid_tracedSVG
         }
       }

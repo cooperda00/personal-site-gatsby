@@ -40,7 +40,7 @@ export const query = graphql`
 
     personal: allContentfulPortfolioItem(
       filter: { type: { eq: "personal" } }
-      sort: { order: ASC, fields: projectStartDate }
+      sort: { order: DESC, fields: projectStartDate }
     ) {
       edges {
         node {

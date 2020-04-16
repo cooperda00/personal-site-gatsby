@@ -40,8 +40,9 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
         content={`${descriptionExtra} | ${description}`}
       />
 
-      <meta name="twitter:image" 
-      content="https://i.imgur.com/D0SErfi.png"
+      <meta
+        name="twitter:image"
+        content="hhttps://raw.githubusercontent.com/cooperda00/personal-site-gatsby/master/socialCards/twitter_share.png"
       />
 
       <meta name="twitter:creator" content="danielcooper.io" />
@@ -72,7 +73,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
       />
       <meta
         property="og:image"
-        content="https://i.imgur.com/urcqcY4.png"
+        content="https://raw.githubusercontent.com/cooperda00/personal-site-gatsby/master/socialCards/og_share.png"
         prefix="og: http://ogp.me/ns#"
       />
       <meta
@@ -82,7 +83,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
       />
       <meta
         property="og:image:height"
-        content="630"
+        content="628"
         prefix="og: http://ogp.me/ns#"
       />
     </Helmet>
@@ -95,11 +96,9 @@ const query = graphql`
       siteMetadata {
         siteUrl
         description
-        image
       }
     }
   }
 `
 
 export default SEO
-

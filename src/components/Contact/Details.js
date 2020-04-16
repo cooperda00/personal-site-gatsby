@@ -8,48 +8,46 @@ import { MdMailOutline } from "react-icons/md"
 import { FiPhoneCall, FiLinkedin } from "react-icons/fi"
 import { IoLogoGithub } from "react-icons/io"
 
-const Details = () => {
-  return (
-    <StyledDetails>
-      <div className="details-container">
-        <p>
-          <a href="mailto:info@danielcooper.io">
-            <MdMailOutline /> info@danielcooper.io
-          </a>
-        </p>
-        <p>
-          <FiPhoneCall /> (+44) 7732 85318
-        </p>
-        <p>
-          <a
-            href="https://github.com/cooperda00"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IoLogoGithub /> GitHub
-          </a>
-        </p>
-        <p>
-          <a
-            href="https://www.linkedin.com/in/daniel-cooper-560859190/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FiLinkedin /> LinkedIn
-          </a>
-        </p>
-      </div>
+const Details = () => (
+  <StyledDetails>
+    <div className="details-container">
+      <p>
+        <a href="mailto:info@danielcooper.io">
+          <MdMailOutline /> info@danielcooper.io
+        </a>
+      </p>
+      <p>
+        <FiPhoneCall /> (+44) 7732 85318
+      </p>
+      <p>
+        <a
+          href="https://github.com/cooperda00"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IoLogoGithub /> GitHub
+        </a>
+      </p>
+      <p>
+        <a
+          href="https://www.linkedin.com/in/daniel-cooper-560859190/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FiLinkedin /> LinkedIn
+        </a>
+      </p>
+    </div>
 
-      <div className="copy-container">
-        <p>
-          Please feel free to contact me on any of the above platforms or via
-          the contact form, and I will do my best to get back to you as soon as
-          possible.
-        </p>
-      </div>
-    </StyledDetails>
-  )
-}
+    <div className="copy-container">
+      <p>
+        Please feel free to contact me on any of the above platforms or via the
+        contact form, and I will do my best to get back to you as soon as
+        possible.
+      </p>
+    </div>
+  </StyledDetails>
+)
 
 const StyledDetails = styled.section`
   ${flex("column", "flex-start", "center")};

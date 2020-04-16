@@ -5,9 +5,9 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import styled from "styled-components"
 import { font, spacing } from "../../Utilities"
 
-const RichTextRender = ({ json }) => {
-  return <StyledRichText>{documentToReactComponents(json)}</StyledRichText>
-}
+const RichTextRender = ({ json }) => (
+  <StyledRichText>{documentToReactComponents(json)}</StyledRichText>
+)
 
 const StyledRichText = styled.div`
   p {

@@ -46,6 +46,7 @@ const IndividualPiece = ({ piece }) => {
             />
           </div>
         </div>
+
         <div className="tech-stack">
           <h2>Tech Stack</h2>
           <div className="tech">
@@ -74,9 +75,9 @@ const IndividualPiece = ({ piece }) => {
 }
 
 const StyledIndividualPiece = styled.section`
-  margin-top: ${spacing.M};
   display: grid;
   grid-template-columns: 1fr;
+  margin-top: ${spacing.M};
 
   @media (min-width: 1024px) {
     grid-template-columns: 1fr 1fr;

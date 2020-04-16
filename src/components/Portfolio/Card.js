@@ -8,22 +8,6 @@ import { spacing, boxShadow } from "../../Utilities"
 //Animation
 import { motion } from "framer-motion"
 
-const skillVariants = {
-  start: {
-    opacity: "0%",
-    x: -50,
-  },
-  end: {
-    opacity: "100%",
-    x: 0,
-  },
-}
-
-const skillTransition = {
-  duration: 1,
-  ease: "easeIn",
-}
-
 const Card = ({ item: { node } }) => {
   const {
     desktopImage: { fluid },
@@ -77,5 +61,21 @@ const StyledCard = styled.article`
     }
   }
 `
+
+const skillVariants = {
+  start: {
+    opacity: "0%",
+    x: -50,
+  },
+  end: {
+    opacity: "100%",
+    x: 0,
+  },
+}
+
+const skillTransition = {
+  duration: 1,
+  ease: "easeIn",
+}
 
 export default Card

@@ -5,45 +5,43 @@ import styled from "styled-components"
 import { flex, spacing, font, grays } from "../../Utilities"
 import { AnimatedArrowButton } from "../../Elements"
 
-const Form = () => {
-  return (
-    <StyledForm
-      name="contact"
-      method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      action="/success"
-    >
-      <div className="input-group">
-        <label htmlFor="name">Name * </label>
-        <input type="text" name="name" id="name" required />
-      </div>
+const Form = () => (
+  <StyledForm
+    name="contact"
+    method="post"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    action="/success"
+  >
+    <div className="input-group">
+      <label htmlFor="name">Name * </label>
+      <input type="text" name="name" id="name" required />
+    </div>
 
-      <div className="input-group">
-        <label htmlFor="company">Company </label>
-        <input type="text" name="company" id="company" />
-      </div>
+    <div className="input-group">
+      <label htmlFor="company">Company </label>
+      <input type="text" name="company" id="company" />
+    </div>
 
-      <div className="input-group">
-        <label htmlFor="email">Email * </label>
-        <input type="email" name="email" id="email" required />
-      </div>
+    <div className="input-group">
+      <label htmlFor="email">Email * </label>
+      <input type="email" name="email" id="email" required />
+    </div>
 
-      <div className="input-group">
-        <label htmlFor="message">Message * </label>
-        <textarea name="message" id="message" required></textarea>
-      </div>
+    <div className="input-group">
+      <label htmlFor="message">Message * </label>
+      <textarea name="message" id="message" required></textarea>
+    </div>
 
-      <div className="submit-group">
-        <AnimatedArrowButton type="submit">Submit</AnimatedArrowButton>
-      </div>
+    <div className="submit-group">
+      <AnimatedArrowButton type="submit">Submit</AnimatedArrowButton>
+    </div>
 
-      {/* INVISIBLE FOR NETLIFY */}
-      <input type="hidden" name="bot-field" />
-      <input type="hidden" name="form-name" value="contact" />
-    </StyledForm>
-  )
-}
+    {/* INVISIBLE FOR NETLIFY */}
+    <input type="hidden" name="bot-field" />
+    <input type="hidden" name="form-name" value="contact" />
+  </StyledForm>
+)
 
 const StyledForm = styled.form`
   ${flex("column", "flex-start", "center")};

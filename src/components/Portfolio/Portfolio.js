@@ -11,52 +11,37 @@ import { TiArrowLeftOutline } from "react-icons/ti"
 //Animation
 import { motion } from "framer-motion"
 
-const containerVariants = {
-  start: {
-    transition: {
-      staggerChildren: 0.3,
-    },
-  },
-  end: {
-    transition: {
-      staggerChildren: 0.3,
-    },
-  },
-}
+const Portfolio = ({ professionalProjects, personalProjects }) => (
+  <StyledPortfolio>
+    <StyledSubHeading>
+      Professional Work <TiArrowLeftOutline />
+    </StyledSubHeading>
+    <motion.div
+      className="horizontal-scroller"
+      variants={containerVariants}
+      initial="start"
+      animate="end"
+    >
+      {professionalProjects.edges.map(item => (
+        <Card item={item} />
+      ))}
+    </motion.div>
 
-const Portfolio = ({ professionalProjects, personalProjects }) => {
-  return (
-    <StyledPortfolio>
-      <StyledSubHeading>
-        Professional Work <TiArrowLeftOutline />
-      </StyledSubHeading>
-      <motion.div
-        className="horizontal-scroller"
-        variants={containerVariants}
-        initial="start"
-        animate="end"
-      >
-        {professionalProjects.edges.map(item => (
-          <Card item={item} />
-        ))}
-      </motion.div>
-
-      <StyledSubHeading>
-        Personal Projects <TiArrowLeftOutline />
-      </StyledSubHeading>
-      <motion.div
-        className="horizontal-scroller"
-        variants={containerVariants}
-        initial="start"
-        animate="end"
-      >
-        {personalProjects.edges.map(item => (
-          <Card item={item} />
-        ))}
-      </motion.div>
-    </StyledPortfolio>
-  )
-}
+    <StyledSubHeading>
+      Personal Projects <TiArrowLeftOutline />
+    </StyledSubHeading>
+    <motion.div
+      className="horizontal-scroller"
+      variants={containerVariants}
+      initial="start"
+      animate="end"
+    >
+      {personalProjects.edges.map(item => (
+        <Card item={item} />
+      ))}
+    </motion.div>
+  </StyledPortfolio>
+)
 
 const StyledPortfolio = styled.section`
   ${flex("column", "flex-start", "center")};
@@ -80,5 +65,18 @@ const StyledPortfolio = styled.section`
     }
   }
 `
+
+const containerVariants = {
+  start: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+  end: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+}
 
 export default Portfolio

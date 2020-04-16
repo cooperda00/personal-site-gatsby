@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react"
 
+//Hooks Replacement for setInterval (by Dan Abramov)
+
 function useInterval(callback, delay) {
   const savedCallback = useRef()
 

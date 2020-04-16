@@ -7,14 +7,12 @@ import { spacing } from "../../Utilities"
 import Form from "./Form"
 import Details from "./Details"
 
-const Contact = () => {
-  return (
-    <StyledContactContainer>
-      <Form />
-      <Details />
-    </StyledContactContainer>
-  )
-}
+const Contact = () => (
+  <StyledContactContainer>
+    <Form />
+    <Details />
+  </StyledContactContainer>
+)
 
 const StyledContactContainer = styled.section`
   display: grid;

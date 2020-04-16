@@ -7,14 +7,12 @@ import { flex } from "../../../Utilities"
 import MainTitle from "./MainTitle"
 import Subtitle from "./Subtitle"
 
-const Title = () => {
-  return (
-    <StyledTitleContainer>
-      <MainTitle />
-      <Subtitle />
-    </StyledTitleContainer>
-  )
-}
+const Title = () => (
+  <StyledTitleContainer>
+    <MainTitle />
+    <Subtitle />
+  </StyledTitleContainer>
+)
 
 const StyledTitleContainer = styled.div`
   ${flex("column", "center", "center")};

@@ -7,47 +7,29 @@ import { flex, font, spacing } from "../../../Utilities"
 //Animation
 import { motion } from "framer-motion"
 
-const skillVariants = {
-  start: {
-    opacity: "0%",
-    x: -20,
-  },
-  end: {
-    opacity: "100%",
-    x: 0,
-  },
-}
-
-const skillTransition = {
-  duration: 0.4,
-  ease: "easeIn",
-}
-
-const Skill = ({ skill }) => {
-  return (
-    <StyledSkill variants={skillVariants} transition={skillTransition}>
-      <div className="image-container">
-        {skill.type === "png" ? (
-          <Image
-            fluid={skill.image}
-            alt={skill.name}
-            imgStyle={{
-              objectFit: "contain",
-            }}
-            className="image-png"
-          />
-        ) : (
-          <img src={skill.image} alt={skill.name} className="image-svg" />
-        )}
-      </div>
-      <p className="skill-name">{skill.name}</p>
-    </StyledSkill>
-  )
-}
+const Skill = ({ skill }) => (
+  <StyledSkill variants={skillVariants} transition={skillTransition}>
+    <div className="image-container">
+      {skill.type === "png" ? (
+        <Image
+          fluid={skill.image}
+          alt={skill.name}
+          imgStyle={{
+            objectFit: "contain",
+          }}
+          className="image-png"
+        />
+      ) : (
+        <img src={skill.image} alt={skill.name} className="image-svg" />
+      )}
+    </div>
+    <p className="skill-name">{skill.name}</p>
+  </StyledSkill>
+)
 
 const StyledSkill = styled(motion.div)`
   ${flex("column", "flex-start", "center")};
-  width: 11rem;
+  width: 10rem;
   height: 10rem;
   margin: ${spacing.M};
 
@@ -70,5 +52,21 @@ const StyledSkill = styled(motion.div)`
     letter-spacing: 0.1rem;
   }
 `
+
+const skillVariants = {
+  start: {
+    opacity: "0%",
+    x: -20,
+  },
+  end: {
+    opacity: "100%",
+    x: 0,
+  },
+}
+
+const skillTransition = {
+  duration: 0.4,
+  ease: "easeIn",
+}
 
 export default Skill

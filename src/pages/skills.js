@@ -3,13 +3,14 @@ import React from "react"
 import { graphql } from "gatsby"
 //Components
 import Layout from "../components/Layout/Layout"
+import SEO from "../components/SEO/SEO"
 import Copy from "../components/Skills/Copy/Copy"
 import Skills from "../components/Skills/Skills/Skills"
-import SEO from "../components/SEO/SEO"
 //SVGs
 import css from "../images/skills/css.svg"
 import gatsby from "../images/skills/gatsby.svg"
 //Styles
+import styled from "styled-components"
 import { StyledMainHeading } from "../Elements"
 
 const SkillsPage = ({ data }) => {
@@ -79,11 +80,22 @@ const SkillsPage = ({ data }) => {
     <Layout>
       <SEO titleExtra="Skills" descriptionExtra="Skills" />
       <StyledMainHeading center>Skills</StyledMainHeading>
-      <Copy />
-      <Skills skills={skills} />
+      <StyledContainer>
+        <Skills skills={skills} />
+        <Copy />
+      </StyledContainer>
     </Layout>
   )
 }
+
+const StyledContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1.5fr 1fr;
+  }
+`
 
 export const query = graphql`
   {

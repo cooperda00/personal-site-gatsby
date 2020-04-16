@@ -2,7 +2,7 @@
 import React from "react"
 //Styles
 import styled from "styled-components"
-import { flex } from "../../../Utilities"
+import { flex, colors } from "../../../Utilities"
 //Components
 import Logo from "./Logo"
 import Navigation from "./Navigation"
@@ -18,12 +18,13 @@ const Sidebar = () => {
   )
 }
 
+// Hex Alpha: 25% = 40, 60% = 99
 const StyledSidebar = styled.header`
   ${flex("column", "space-between", "center")};
   background: linear-gradient(
-    270deg,
-    rgba(238, 174, 201, 0.227328431372549) 0%,
-    #daa45ca2 100%
+    to right,
+    ${colors.primary + "99"} 0%,
+    ${colors.secondary + "40"} 100%
   );
   height: 100vh;
   min-width: 75px;

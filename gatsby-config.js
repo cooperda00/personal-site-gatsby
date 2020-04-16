@@ -10,7 +10,6 @@ module.exports = {
     description: `Front-end web developer working with React and Gatsby JS.`,
     author: `danielcooper.io`,
     siteUrl: "https://danielcooper.io",
-    image: "/og_image.png",
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -20,6 +19,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-netlify`,
     {
       resolve: "gatsby-plugin-html-attributes",
@@ -61,6 +61,5 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-netlify`,
   ],
 }

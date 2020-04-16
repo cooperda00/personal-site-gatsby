@@ -1,6 +1,9 @@
+//Modules
 import React from "react"
-import { motion, AnimatePresence } from "framer-motion"
+//Styles
 import styled from "styled-components"
+//Animation
+import { motion, AnimatePresence } from "framer-motion"
 
 const variants = {
   enter: {
@@ -26,7 +29,7 @@ const Slideshow = ({ image }) => (
         duration: 1,
       }}
     >
-      <img src={image} alt="Website screenshot" />
+      <img src={image} alt="Portfoilio website screenshot" />
     </StyledSlideshow>
   </AnimatePresence>
 )

@@ -3,26 +3,21 @@ import React from "react"
 import { graphql } from "gatsby"
 //Components
 import Layout from "../components/Layout/Layout"
-import Portfolio from "../components/Portfolio/Portfolio"
 import SEO from "../components/SEO/SEO"
+import Portfolio from "../components/Portfolio/Portfolio"
 //Styles
 import { StyledMainHeading } from "../Elements"
 
-const PortfolioPage = ({ data }) => {
-  const professionalProjects = data.professional
-  const personalProjects = data.personal
-
-  return (
-    <Layout>
-      <SEO titleExtra="Portfolio" descriptionExtra="Portfolio" />
-      <StyledMainHeading center>Portfolio</StyledMainHeading>
-      <Portfolio
-        professionalProjects={professionalProjects}
-        personalProjects={personalProjects}
-      />
-    </Layout>
-  )
-}
+const PortfolioPage = ({ data }) => (
+  <Layout>
+    <SEO titleExtra="Portfolio" descriptionExtra="Portfolio" />
+    <StyledMainHeading center>Portfolio</StyledMainHeading>
+    <Portfolio
+      professionalProjects={data.professional}
+      personalProjects={data.personal}
+    />
+  </Layout>
+)
 
 export const query = graphql`
   {
@@ -35,7 +30,7 @@ export const query = graphql`
           path
           title
           desktopImage {
-            fluid(maxWidth: 1200) {
+            fluid(maxWidth: 500) {
               ...GatsbyContentfulFluid_tracedSVG
             }
           }
@@ -52,7 +47,7 @@ export const query = graphql`
           path
           title
           desktopImage {
-            fluid(maxWidth: 1200) {
+            fluid(maxWidth: 500) {
               ...GatsbyContentfulFluid_tracedSVG
             }
           }

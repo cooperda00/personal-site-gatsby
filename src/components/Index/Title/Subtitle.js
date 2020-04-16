@@ -3,19 +3,95 @@ import React from "react"
 //Styles
 import styled from "styled-components"
 import { flex, font, spacing } from "../../../Utilities"
+//Animation
+import { motion } from "framer-motion"
 
-const Subtitle = () => {
-  return (
-    <StyledSubtitle>
-      <h2>UX</h2>
-      <h2>JavaScript </h2>
-      <h2>UI </h2>
-      <h2>React</h2>
-    </StyledSubtitle>
-  )
+const variants = {
+  start: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+  end: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
 }
 
-const StyledSubtitle = styled.div`
+const transition = {
+  duration: 0.5,
+}
+
+const Subtitle = () => (
+  <StyledSubtitle variants={variants} initial="start" animate="end">
+    <motion.h2
+      variants={{
+        start: {
+          opacity: "0%",
+          y: -100,
+        },
+        end: {
+          opacity: "100%",
+          y: 0,
+        },
+      }}
+      transition={transition}
+    >
+      UX
+    </motion.h2>
+
+    <motion.h2
+      variants={{
+        start: {
+          opacity: "0%",
+          x: 100,
+        },
+        end: {
+          opacity: "100%",
+          x: 0,
+        },
+      }}
+      transition={transition}
+    >
+      JavaScript{" "}
+    </motion.h2>
+
+    <motion.h2
+      variants={{
+        start: {
+          opacity: "0%",
+          x: -100,
+        },
+        end: {
+          opacity: "100%",
+          x: 0,
+        },
+      }}
+      transition={transition}
+    >
+      UI{" "}
+    </motion.h2>
+
+    <motion.h2
+      variants={{
+        start: {
+          opacity: "0%",
+          y: 100,
+        },
+        end: {
+          opacity: "100%",
+          y: 0,
+        },
+      }}
+      transition={transition}
+    >
+      React
+    </motion.h2>
+  </StyledSubtitle>
+)
+
+const StyledSubtitle = styled(motion.div)`
   ${flex("column")};
   letter-spacing: 0.4rem;
   position: relative;

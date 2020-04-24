@@ -24,38 +24,40 @@ const IndividualPiece = ({ piece }) => {
   return (
     <StyledIndividualPiece>
       <StyledLeft>
-        <div className="images-container">
-          <div className="desktop-container">
-            <Image
-              fluid={desktopFluid}
-              className="image"
-              imgStyle={{
-                objectFit: "contain",
-                objectPosition: "50% 50%",
-              }}
-            />
+        <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+          <div className="images-container">
+            <div className="desktop-container">
+              <Image
+                fluid={desktopFluid}
+                className="image"
+                imgStyle={{
+                  objectFit: "contain",
+                  objectPosition: "50% 50%",
+                }}
+              />
+            </div>
+            <div className="mobile-container">
+              <Image
+                fluid={mobileFluid}
+                className="image"
+                imgStyle={{
+                  objectFit: "cover",
+                  objectPosition: "50% 50%",
+                }}
+              />
+            </div>
           </div>
-          <div className="mobile-container">
-            <Image
-              fluid={mobileFluid}
-              className="image"
-              imgStyle={{
-                objectFit: "cover",
-                objectPosition: "50% 50%",
-              }}
-            />
-          </div>
-        </div>
 
-        <div className="tech-stack">
-          <h2>Tech Stack</h2>
-          <div className="tech">
-            {" "}
-            {technology.map(tech => (
-              <TechLogo skill={tech} />
-            ))}
+          <div className="tech-stack">
+            <h2>Tech Stack</h2>
+            <div className="tech">
+              {" "}
+              {technology.map(tech => (
+                <TechLogo skill={tech} />
+              ))}
+            </div>
           </div>
-        </div>
+        </a>
       </StyledLeft>
 
       <StyledRight>

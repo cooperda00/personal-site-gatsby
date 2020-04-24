@@ -16,7 +16,15 @@ const Card = ({ item: { node } }) => {
   } = node
 
   return (
-    <motion.div variants={skillVariants} transition={skillTransition}>
+    <motion.div
+      variants={skillVariants}
+      // transition={skillTransition}
+      whileHover={{
+        scale: 0.97,
+        transition: { duration: 0.15 },
+      }}
+      whileTap={{ scale: 0.95 }}
+    >
       <Link to={`/portfolio${path}`} aria-label={`Learn more about ${title}`}>
         <StyledCard>
           <div className="image-container">
@@ -73,9 +81,9 @@ const skillVariants = {
   },
 }
 
-const skillTransition = {
-  duration: 1,
-  ease: "easeIn",
-}
+// const skillTransition = {
+//   duration: 1,
+//   ease: "easeIn",
+// }
 
 export default Card

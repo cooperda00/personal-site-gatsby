@@ -11,7 +11,7 @@ const IndividualPortfolioItem = ({
   data: { contentfulPortfolioItem: piece },
 }) => (
   <Layout>
-    <StyledMainHeading>{piece.title}</StyledMainHeading>
+    <StyledMainHeading center>{piece.title}</StyledMainHeading>
     <IndividualPiece piece={piece} />
   </Layout>
 )

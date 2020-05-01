@@ -67,9 +67,12 @@ const IndividualPiece = ({ piece }) => {
           <a href={liveUrl} target="_blank" rel="noopener noreferrer">
             <LiveIcon /> Live Site
           </a>
-          <a href={codeUrl} target="_blank" rel="noopener noreferrer">
-            <CodeIcon /> Code
-          </a>
+
+          {codeUrl && (
+            <a href={codeUrl} target="_blank" rel="noopener noreferrer">
+              <CodeIcon /> Code
+            </a>
+          )}
         </div>
       </StyledRight>
     </StyledIndividualPiece>

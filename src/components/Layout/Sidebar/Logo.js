@@ -34,6 +34,13 @@ const StyledLogo = styled(Link)`
 
   @media (min-width: 360px) {
     svg {
+      width: 8rem;
+      height: 10rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    svg {
       width: 10rem;
       height: 12rem;
     }

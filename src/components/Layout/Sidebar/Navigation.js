@@ -31,7 +31,7 @@ const StyledNavigation = styled.nav`
   ${flex("column", "flex-start", "center")};
 
   a {
-    ${font("XS")};
+    font-size: 1.55rem;
     margin-bottom: 2rem;
     transition: 0.4s;
 
@@ -39,7 +39,7 @@ const StyledNavigation = styled.nav`
       text-shadow: 0 0 1px ${grays[5]};
     }
 
-    @media (min-width: 360px) {
+    @media (min-width: 1200px) {
       ${font("S")};
     }
   }

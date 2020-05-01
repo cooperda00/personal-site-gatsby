@@ -42,9 +42,9 @@ const StyledCopy = styled.section`
       ${font("S")};
     }
 
-    @media (min-width: 700px) {
+    /* @media (min-width: 700px) {
       ${font("SM")};
-    }
+    } */
   }
 `
 

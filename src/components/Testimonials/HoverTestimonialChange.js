@@ -27,6 +27,9 @@ const HoverTestimonialChange = ({
                 setSelectedTestimonial("one")
               }
             }}
+            onTouchStart={() => {
+              setSelectedTestimonial("one")
+            }}
           >
             {selectedTestimonial === "one" ? (
               <mark>James Round</mark>
@@ -46,6 +49,9 @@ const HoverTestimonialChange = ({
                 setSelectedTestimonial("two")
               }
             }}
+            onTouchStart={() => {
+              setSelectedTestimonial("two")
+            }}
           >
             {selectedTestimonial === "two" ? (
               <mark>Mutsumi Adachi</mark>
@@ -64,6 +70,9 @@ const HoverTestimonialChange = ({
               if (e.which === 13) {
                 setSelectedTestimonial("three")
               }
+            }}
+            onTouchStart={() => {
+              setSelectedTestimonial("three")
             }}
           >
             {selectedTestimonial === "three" ? (
@@ -125,6 +134,8 @@ const StyledWrapper = styled.div`
         cursor: pointer;
         position: relative;
         background: none;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
 
         mark {
           background: ${colors.primary + "55"};
@@ -138,6 +149,7 @@ const StyledWrapper = styled.div`
           height: 6rem;
           width: 100%;
           margin-bottom: ${spacing.M};
+          outline: inherit;
 
           .bar {
             width: 0.3rem;

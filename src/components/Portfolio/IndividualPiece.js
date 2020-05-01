@@ -83,6 +83,7 @@ const StyledIndividualPiece = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   margin-top: ${spacing.M};
+  width: 100%;
 
   @media (min-width: 1024px) {
     grid-template-columns: 1fr 1fr;
@@ -90,6 +91,8 @@ const StyledIndividualPiece = styled.section`
 `
 
 const StyledLeft = styled.article`
+  width: 100%;
+
   .images-container {
     width: 100%;
     position: relative;
@@ -134,21 +137,30 @@ const StyledLeft = styled.article`
   }
 
   .tech-stack {
+    ${flex("column", "center", "flex-end")};
+
     h2 {
-      ${font("L")};
+      ${font("M")};
       margin: ${spacing.SM} 0 ${spacing.SM} 0;
       font-weight: 300;
       text-align: right;
+
+      @media (min-width: 500px) {
+        ${font("L")};
+      }
     }
 
     .tech {
       ${flex("row", "flex-end", "center")};
+      flex-wrap: wrap;
+      width: 70%;
     }
   }
 `
 
 const StyledRight = styled.article`
   margin-top: ${spacing.M};
+  max-width: 100%;
 
   @media (min-width: 600px) {
     margin-top: ${spacing.L};

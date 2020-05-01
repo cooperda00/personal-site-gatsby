@@ -31,12 +31,16 @@ const StyledNavigation = styled.nav`
   ${flex("column", "flex-start", "center")};
 
   a {
-    font-size: 1.55rem;
+    font-size: 1.15rem;
     margin-bottom: 2rem;
     transition: 0.4s;
 
     &:hover {
       text-shadow: 0 0 1px ${grays[5]};
+    }
+
+    @media (min-width: 321px) {
+      font-size: 1.55rem;
     }
 
     @media (min-width: 1200px) {
